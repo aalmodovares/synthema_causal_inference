@@ -45,3 +45,11 @@ And ATE (Average treatment effect): ATE = E[y1-y0]
  With this information, we can implement a causal inference model (that only have access to factual outcome) for predicting treatment effects.
 
  The performance of the model in ITE predictions can be measured use PEHE (precission in heterogeneous treatment effects): PEHE = sqrt(E[(ite_real - ite_pred)^2])
+
+ # EXAMPLE NOTEBOOK
+
+ In the notebooks: 'causal_inference_notebook_ihdp' and 'causal_inference_notebook_aml', you can find examples of this whole process. A well known collection of methods for causal inference has been implemented to illustrate how they work and how to evaluate the performance.
+
+ In addition, you can find other two notebooks. 'eda_notebook' includes a brief exploratory data analysis of AML database to evaluate data characteristics and potential lacks of informations. We can find a brief study of positivity assumption, checking if there is overlapping of the features between the treated and control group.
+ 
+ On the other hand 'predictors_notebook' has been used to evaluate if the features are good predictors of the treatments (considering the treatments are HSCT variations). This is important for the most of the algorithms of causal inference, specially for those that use propensity scores.
